@@ -40,7 +40,7 @@ def main():
         print(mismatch)
     elif izvele == "F":
         fails = input("Name of the file:")
-        with open("test/"+fails,"r") as file:
+        with open(fails,"r") as file:
             text = file.read().strip()
             mismatch = find_mismatch(text)
             print(mismatch)
