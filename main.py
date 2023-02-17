@@ -34,14 +34,14 @@ def find_mismatch(text):
 def main():
     # Printing answer, write your code here
     izvele = input("F or I:")
-    if izvele == "I":
+    if "I" in izvele:
         text = input()
         mismatch = find_mismatch(text)
         print(mismatch)
-    elif izvele == "F":
+    elif "F" in izvele:
         fails = input("Name of the file:")
-        with open(fails,"r") as file:
-            text = file.read().strip()
+        with open("test/"+fails,"r") as file:
+            text = file.read()
             mismatch = find_mismatch(text)
             print(mismatch)
     else :
